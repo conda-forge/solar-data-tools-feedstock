@@ -1,5 +1,6 @@
 {% set name = "solar-data-tools" %}
 {% set version = "1.6.4" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -12,17 +13,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
     - pip
-    - python >=3.9
+    - python >={{ python_min }}
     - scipy
     - numpy
     - pandas
@@ -52,6 +53,7 @@ test:
     - solardatatools
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
