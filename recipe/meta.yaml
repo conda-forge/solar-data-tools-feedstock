@@ -1,5 +1,5 @@
 {% set name = "solar-data-tools" %}
-{% set version = "2.1.3" %}
+{% set version = "2.1.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/solar_data_tools-{{ version }}.tar.gz
-  sha256: f9461df88e772404153391271c1f037dac1df9a1fdad5cb58bad88d5fa82103b
+  sha256: 87101d7edb6356b277362bd8a2bd4f8d0197de87f44be1bf9dcf57a1dd55de63
 
 build:
   noarch: python
